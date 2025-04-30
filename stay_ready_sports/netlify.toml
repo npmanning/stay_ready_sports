@@ -1,0 +1,15 @@
+
+git add netlify.toml
+
+
+
+to render"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
