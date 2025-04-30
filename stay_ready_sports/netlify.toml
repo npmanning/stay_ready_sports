@@ -1,24 +1,22 @@
 [build]
-command = 'hugo'
-publish = 'public'
+  publish = "public"         # where Hugo outputs the site
+  command = "hugo"           # how to build the site
 
 [build.environment]
-HUGO_VERSION = '0.147.0'
+  HUGO_VERSION = "0.147.0"   # match your local Hugo version
+  # Add others if needed later, like:
+  # R_VERSION = "4.3.1"
 
-[context]
-[context.branch-deploy]
-command = 'hugo -F -b $DEPLOY_PRIME_URL'
+[context.production.environment]
+  HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = 'hugo -F -b $DEPLOY_PRIME_URL'
+  command = "hugo --buildDrafts --buildFuture"
 
-[context.production]
-[context.production.environment]
-HUGO_ENV = 'production'
+[context.branch-deploy]
+  command = "hugo --buildDrafts --buildFuture"
 
-[build]
-  publish = "public"
-  command = "hugo"
-
-[build.environment]
-  HUGO_VERSION = "0.115.0"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
