@@ -1,0 +1,14 @@
+project:
+  type: website
+
+website:
+  title: "Stay Ready Sports"
+  navbar:
+    left:
+      - href: index.Rmd
+        text: Home
+
+format:
+  html:
+    theme: cosmo
+    toc: true
