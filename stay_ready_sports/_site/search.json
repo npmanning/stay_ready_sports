@@ -68,5 +68,12 @@
     "title": "About",
     "section": "",
     "text": "This is a “hello world” example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie."
+  },
+  {
+    "objectID": "index-copy.html",
+    "href": "index-copy.html",
+    "title": "Stay Ready Sports",
+    "section": "",
+    "text": "Welcome to my sports analytics blog! 🏀📊\nI’ll be sharing data-driven insights, modeling experiments, and visualizations — starting soon."
   }
 ]
