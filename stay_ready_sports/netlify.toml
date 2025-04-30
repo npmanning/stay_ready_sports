@@ -1,20 +1,9 @@
 [build]
-  publish = "public"         # where Hugo outputs the site
-  command = "hugo"           # how to build the site
+  command = "quarto render"
+  publish = "_site"
 
 [build.environment]
-  HUGO_VERSION = "0.147.0"   # match your local Hugo version
-  # Add others if needed later, like:
-  # R_VERSION = "4.3.1"
-
-[context.production.environment]
-  HUGO_ENV = "production"
-
-[context.deploy-preview]
-  command = "hugo --buildDrafts --buildFuture"
-
-[context.branch-deploy]
-  command = "hugo --buildDrafts --buildFuture"
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
